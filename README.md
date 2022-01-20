@@ -21,18 +21,11 @@ nodemon index.js
 
 ## API Reference
 
-#### Get all items
+#### 1. Get all items
 
 ```http
   GET /api/get_incidents
 ```
-
-Response: {
-    "resp_code": "001",
-    "resp_desc": "Incident records found",
-    "details": [ json_object]   
-} 
-
 
 #### Response: {
     "resp_code": "001",
@@ -41,7 +34,7 @@ Response: {
 } 
 
 
-#### Report Incident
+#### 2. Report Incident
 
 ```http
   POST /api/req_submit_report
