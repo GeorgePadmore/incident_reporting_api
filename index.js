@@ -46,5 +46,5 @@ app.use("/api", Router);
 
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log(`API is up and listening on ${process.env.API_PORT}...`)
+    console.log(`API is up and listening on ${process.env.PORT}...`)
 })
