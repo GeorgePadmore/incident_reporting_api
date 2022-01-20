@@ -59,19 +59,9 @@ nodemon index.js
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`PGUSER`
+`DATABASE_URL`
 
-`PGHOST`
-
-`PGDATABASE`
-
-`PGPASSWORD`
-
-`PGPORT`
-
-`API_HOST`
-
-`API_PORT`
+`PORT`
 
 `WEATHER_API_TOKEN`
 
