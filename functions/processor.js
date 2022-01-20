@@ -39,7 +39,7 @@ module.exports = {
         //get weather report based on provided city
         const weather_report = FetchWeather(city).then(response => {
 
-            if (response.data.cod && response.data.cod == 200) {
+            if (response.data.cod && response.data.cod == 200) { //check the response code status before using data. cod 200: successful
 
                 //save incident in DB
                 const weather_report = response.data;

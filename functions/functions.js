@@ -5,7 +5,7 @@ module.exports = {
     FetchWeather: (city) =>  {
 
         try {
-            return axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d0e58b78bf9192dab9c590e20089aa88`)
+            return axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_TOKEN}`)
         } catch (error) {
             // console.error(error);
             throw error;
