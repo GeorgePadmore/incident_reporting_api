@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const { body } = require('express-validator');
-const { ProcessRecieveReport, ProcessGetIncidents } = require("./processor");
+const { ProcessRecieveReport, ProcessGetIncidents, ProcessGetClientIncidents } = require("./processor");
 
 //endpoint req_submit_report with request body validation
 router.post(
@@ -12,6 +12,6 @@ router.post(
     ProcessRecieveReport
 );
 
-router.get("/get_incidents", ProcessGetIncidents);
+router.get("/get_incidents", ProcessGetIncidents); //Get all incidents
 
 module.exports = router;
