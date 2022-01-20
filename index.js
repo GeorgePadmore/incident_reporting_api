@@ -8,8 +8,6 @@ const morgan = require('morgan')
 const requestIp = require('request-ip')
 const Router = require("./functions/router")
 
-
-
 app.use(requestIp.mw({ requestIp : requestIp }));
 
 
@@ -46,5 +44,5 @@ app.use("/api", Router);
 
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log(`API is up and listening on ${process.env.PORT}...`)
+    console.log(`API is up and listening on ${process.env.PORT}...\n`)
 })
