@@ -8,15 +8,25 @@ module.exports = {
 
     //Process and fetch all incidents and return in a json format 
     ProcessGetIncidents: (req, res) => {
-        getAllIncidents()
-            .then(
-                incident_reports => 
+
+        getAllIncidents().then( incident_reports => {
+            console.log(incident_reports)
+
+            if (incident_reports) {
                 res.json({
                     resp_code: constants.INCIDENTS_FOUND_RESP_CODE,
                     resp_desc: constants.INCIDENTS_FOUND_RESP_DESC,
                     details: incident_reports
                 })
-            ).catch(err => {
+            } else {
+                res.json({
+                    resp_code: constants.NO_INCIDENTS_RESP_CODE,
+                    resp_desc: constants.NO_INCIDENTS_RESP_DESC
+                })
+            }
+            
+            
+        }).catch(err => {
                 console.log(err);
                 res.status(500).json({resp_code: constants.ERR_GET_INCIDENTS_RESP_CODE, resp_desc: constants.ERR_GET_INCIDENTS_RESP_DESC });
             });

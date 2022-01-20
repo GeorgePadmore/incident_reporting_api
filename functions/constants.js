@@ -21,6 +21,9 @@ define("ERR_RESP_DESC", "Sorry we couldn't complete your request. Please try aga
 define("ERR_GET_INCIDENTS_RESP_CODE", "003");
 define("ERR_GET_INCIDENTS_RESP_DESC", "Sorry we couldn't fetch the incident reports. Please try again");
 
+define("NO_INCIDENTS_RESP_CODE", "004");
+define("NO_INCIDENTS_RESP_DESC", "No incident has been reported yet.");
+
 define("EMPTY_INCIDENTS_RECORD_RESP_CODE", "010");
 define("EMPTY_INCIDENTS_RECORD_RESP_DESC", "Incident records not found");
 

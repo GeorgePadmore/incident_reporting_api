@@ -9,7 +9,12 @@ module.exports = {
             db.query('SELECT client_id, incident_desc, city, country, weather_report FROM incidents ORDER BY id desc', (err, results) => {
                 if (err) console.error(err);
                 console.log('incident Query Results: ', results.rowCount);
-                resolve(results.rows);
+                if (results.rowCount > 0) {
+                    resolve(results.rows);
+                } else {
+                    resolve(null);
+                }
+                
             });
         } catch (error) {
             throw error;
