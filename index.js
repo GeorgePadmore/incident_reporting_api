@@ -23,7 +23,7 @@ app.use((err, req, res, next) => {
 });
 
 
-var allowedOrigins = ['http://localhost', 'http://localhost:4200', 'http://192.168.8.148:4200', 'http://192.168.8.141'];
+var allowedOrigins = ['http://localhost', 'http://localhost:4200']; //Add your list of IPs here for whitelisting
 app.use(cors({
   origin: function(origin, callback){
     // allow requests with no origin 
